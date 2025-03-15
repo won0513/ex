@@ -60,8 +60,8 @@ def return_answer(q, df):
     #상위 다섯 개 저장(중복 제거)
     result = [] #전체
     score = []
-    for sim in sim_scores:
-        a = df['answer'][sim[0]]
+     for sim in sim_scores:
+        a = df['answer'][sim[0]].split('다.')[:-1]
         if a not in result:
             result.append(a)
             score.append(sim[1])
