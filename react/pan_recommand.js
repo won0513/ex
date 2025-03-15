@@ -27,7 +27,7 @@ const [check, setCheck] = useState("0"); //상태(서버에 post하면 submit으
           </header>
         <nav id="nav">&nbsp;</nav>
         <div id="section">
-          <div style={{backgroundColor:'#EEEEEE', display:'flex', borderRadius: '10px 10px 10px 10px / 10px 10px 10px 10px', position: 'absolute', left:'5dvw',  width:'42.5dvw', height:'90dvh'}}>
+          <div className='pan_div'>
              <form style= {{fontSize:28, margin: 'auto'}} onSubmit={handleSubmit}>
              <textarea spellcheck="false" style={{fontSize:20, margin: 'auto'}} id='recommandInput' onChange={onUiChange}  name="input" cols="40" rows="3" value={userInput} placeholder="상황을 입력해주세요"></textarea>
              <input className='b' type="submit" value="결과 보기"/>
@@ -35,14 +35,20 @@ const [check, setCheck] = useState("0"); //상태(서버에 post하면 submit으
           </div>
           {(typeof result.pan_list === 'undefined' ? (
               <>{(check === 'submit') && <LoadingModal/>}
-              <div style={{backgroundColor:'#EEEEEE', display:'flex', justifyContent: 'center', alignContent: 'center', borderRadius: '10px 10px 10px 10px / 10px 10px 10px 10px', position: 'absolute', left:'52.5dvw', width:'42.5dvw', height:'90dvh', fontSize:80}}>
+              <div className='pan_div' id='pan_div_r1'>
                     <p style={{margin:'auto'}}>?</p>
                 </div></>) : (
-                <div style={{ display:'inline-block', display:'flex', flexDirection:'column', justifyContent:'space-between', position: 'absolute', left:'52.5dvw', width:'42.5dvw', height:'93dvh'}}>
+                <div id='pan_div_r2'>
                   {result.pan_list.map((r, idx) => {
                     return (
                       <p className='block'>
-                            <p style={{fontSize: '14px'}}>{r.slice(0, 100)}</p>
+                            <p style={{fontSize: '13px'}}>
+                              {r.map((s) => {
+                                return (
+                                  <p>{s+'다.'}</p>
+                                )
+                              })}
+                            </p>
                       </p>
                     )})}
                 </div>
