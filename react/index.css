@@ -1,0 +1,44 @@
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html, body { margin : 0; padding : 0; height : 100%; width:100%;}
+#header {
+    text-align : center;
+    width : 100%;
+    height : 5dvh;
+ }
+ #nav {
+     width : 5%;
+     height : 90dvh;
+     float : left;
+ }
+#section {
+    width : 90%;
+    height : 90dvh;
+    float : left;
+}
+.block {
+    background-color:#EEEEEE;
+    border-radius: 10px 10px 10px 10px / 10px 10px 10px 10px;
+    margin-bottom: auto;
+}
+#aside {
+    width : 5%;
+    height : 90dvh;
+    float : left;
+}
+footer {
+    width : 100%;
+    height : 5dvh;
+    float : left;
+}
+.overlay-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
