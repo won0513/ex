@@ -4,9 +4,9 @@ import axios from "axios";
 import LoadingModal from './loading_modal.js';
 function Recommand () {
   const [userInput, setUserInput] = useState(""); //사용자 입력 내용
-  const [result, setResult] = useState({}); //판례 추천 결과- [일련 번호, 판결요지]*5
+  const [result, setResult] = useState({}); //추천 결과
 const [check, setCheck] = useState("0"); //상태(서버에 post하면 submit으로 바꿈)
-// 사용자 입력 내용 화면에 출력, textarea높이 조절
+// 사용자 입력 내용 화면에 출력
   const onUiChange = (e) => {
     setUserInput(e.target.value);
   };
