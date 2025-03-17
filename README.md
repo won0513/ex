@@ -65,3 +65,8 @@ sbert_유클리드: 0.7286, 0.5642
 * chatbot
   * similarity_based_chatbot_vs1.ipynb: 최종적으로 선택된 것들을 이용하여 질의응답을 완성하고 결과를 확인하는 코드
   * similarity_based_chatbot_vs1_add_data.ipynb: 법률구조공단의 데이터를 포함해서 결과를 확인하는 코드
+## 5. 웹 (25.03.17 추가)
+* 위 파이썬 코드를 이용하여 간단한 웹 페이지를 만들었다.
+* flask와 gunicorn, react를 사용했다.
+* 파이썬 파일: modules.py는 파이썬 파일을 정리하여 모듈을 모아놓은 것이고, forms.py는 프론트엔드(react)와 데이터를 주고 받는 파일이다.
+* 리액트 파일: pan_recommand.js는 메인이 되는 페이지로, 사용자 입력을 받아 서버에 보내고 추천 결과를 받아 보여준다. loading_modal.js는 로딩 중일 때 보여줄 페이지이다.
